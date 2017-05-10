@@ -58,7 +58,7 @@ public class ControlFlowExercises {
             for (i = 1; i <= upTo; i++) {
                 int squared = i * i;
                 int cubed = i * i * i;
-                System.out.println("   " + i + "   |   " + squared + "     |   " + cubed + " ");
+                System.out.printf("%-7s|%-9s|%d%n", i, squared, cubed);
 
             }
             System.out.println("Would you like to try another? Y/N");
