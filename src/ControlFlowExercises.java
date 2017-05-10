@@ -116,7 +116,21 @@ public class ControlFlowExercises {
             System.out.println("Would you like to try another number? Y/N");
             contRain = scan.next();
         }
-        System.out.println("Thank you, come again!");
 
+        int avg = 0;
+        int lowestGrade = 100;
+        System.out.println("Please enter the 10 students grades :");
+        int[] grades = new int[10];
+        for(i=0; i < 10; i++){
+            grades[i] = scan.nextInt();
+            avg += grades[i];
+            if(grades[i] < lowestGrade){
+                lowestGrade = grades[i];
+            }
+        }
+        System.out.println("The average grade was: " + (avg/10));
+        System.out.println("The lowest grade was " + lowestGrade);
+
+        System.out.println("Thank you, come again!");
     }
 }
