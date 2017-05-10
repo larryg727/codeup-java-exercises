@@ -131,6 +131,43 @@ public class ControlFlowExercises {
         System.out.println("The average grade was: " + (avg/10));
         System.out.println("The lowest grade was " + lowestGrade);
 
+
+        System.out.println("Hello, What animal will you be studying?  Elephants, Giraffes, or Chimpanzee?");
+        String animal = scan.next();
+        int numberToStudy;
+        if(animal.equalsIgnoreCase("elephant")){
+            numberToStudy = 20;
+        }else if (animal.equalsIgnoreCase("giraffes")){
+            numberToStudy = 15;
+        }else {
+            numberToStudy = 40;
+        }
+        System.out.println("Please enter the ages of the " + numberToStudy + " " + animal + "s in years. 11 months and under = 0");
+
+        int age;
+        int lessOne = 0;
+        int oneTwo = 0;
+        int threeUp = 0;
+        for(i=1; i <= numberToStudy; i++){
+            age = scan.nextInt();
+            if (age == 0){
+                lessOne += 1;
+            }else if(age <3 && age >= 1){
+                oneTwo += 1;
+            }else{
+                threeUp += 1;
+            }
+        }
+        double morePrecise = numberToStudy;
+        double percent = 100 / morePrecise;
+        double zeroPer = lessOne;
+        double onePer = oneTwo;
+        double threePer = threeUp;
+
+        System.out.printf("There are %.2f%% %s under one.\n" , (zeroPer * percent), animal);
+        System.out.printf("There are %.2f%% %s over one and under three.\n", (onePer * percent), animal);
+        System.out.printf("There are %.2f%% %s three years and older\n", (threePer * percent), animal);
+
         System.out.println("Thank you, come again!");
     }
 }
