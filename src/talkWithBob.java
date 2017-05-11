@@ -14,7 +14,7 @@ public class talkWithBob {
                 System.out.println("Sure");
             } else if (input.trim().equals("")) {
                 System.out.println("Fine. Be that way!");
-            } else if (input.toUpperCase().equals(input)) {
+            } else if (input.toUpperCase().equals(input) && !input.toLowerCase().equals(input)) {
                 System.out.println("Whoa, chill out");
             } else if (input.toLowerCase().contains("bye")) {
                 bye = "true";
