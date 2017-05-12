@@ -28,16 +28,16 @@ public class methodsExercise {
             answer += y;
         }return answer;
     }
-
+static int answer = 0;
     public static int multiplicationNoStarRecursion(int x, int y) {
 
 
-        if (0 <= x) {
+        if (0 < x) {
             x--;
-        y += y;
+        answer += y;
         multiplicationNoStarRecursion(x, y);
         }
-        return y;
+        return answer;
     }
 
     public static void main(String[] args) {
@@ -48,6 +48,6 @@ public class methodsExercise {
         System.out.println(division(24,2));
         System.out.println(modulus(12,3));
         System.out.println(multiplicationNoStar(8,5));
-        System.out.println(multiplicationNoStarRecursion(3,5));
+        System.out.println(multiplicationNoStarRecursion(6,5));
     }
 }
