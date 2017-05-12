@@ -31,14 +31,20 @@ public class gameDev {
     }
 
     public static void main(String[] args) {
-        System.out.println("I'm thinking of a number between 1 and 100. Can you guess it?");
+        System.out.println("I'm thinking of a number between 1 and 100. Can you guess it in 10 guesses?");
         int random = random();
         int guess;
+        int guessCount = 0;
         boolean right = false;
-        while(!right){
+        while(!right && guessCount <10){
             guess = guess();
+            guessCount += 1;
             right = compare(random, guess);
-
+        }
+        if(guessCount <= 10 && right){
+            System.out.println("You got it in " + guessCount + " guesses.");
+        }else{
+            System.out.println("Sorry your out of guesses.");
         }
     }
 
