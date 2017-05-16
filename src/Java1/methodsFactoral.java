@@ -1,3 +1,5 @@
+package Java1;
+
 import java.util.Scanner;
 
 /**
@@ -16,21 +18,21 @@ public class methodsFactoral {
         return userInput;
     }
 
-    public static void factoral(int min, int max){
+    public static void factorial(int min, int max){
         String again = "y";
         while(again.equalsIgnoreCase("y")) {
           int input =  getInteger(min, max);
             int answer = 1;
-            String factoral = input + "! = ";
+            String factorial = input + "! = ";
             for (int i = 1; i <= input; i++) {
                 answer = answer * i;
                 if (i < input) {
-                    factoral += i + " * ";
+                    factorial += i + " x ";
                 } else if (i == input) {
-                    factoral += i + " = " + answer;
+                    factorial += i + " = " + answer;
                 }
             }
-            System.out.println(factoral);
+            System.out.println(factorial);
         System.out.println("Would you like to try another? y/n");
         Scanner scan = new Scanner(System.in);
         again = scan.next();
@@ -38,7 +40,7 @@ public class methodsFactoral {
     }
 
     public static void main(String[] args) {
-        factoral(1,33);
+        factorial(1,33);
     }
 
 }
