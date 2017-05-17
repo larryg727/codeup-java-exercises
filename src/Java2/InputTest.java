@@ -23,8 +23,7 @@ public class InputTest {
         int number = userInput.getInt(1, 5);
         System.out.println(number);
 
-        System.out.println("Enter any integer");
-        int anyNumber = userInput.getInt();
+        int anyNumber = userInput.getInt("Enter any integer");
         System.out.println("u picked " + anyNumber);
 
         System.out.println("Enter a number between 1.2 an 1.85");
