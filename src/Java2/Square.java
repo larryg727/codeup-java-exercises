@@ -3,21 +3,33 @@ package Java2;
 /**
  * Created by larryg on 5/19/17.
  */
-class Square extends Rectangle {
+class Square extends Quadralateral {
     private double side;
 
-    public Square(double side) {
-        super(side, side);
-        this.side = side;
+    @Override
+    void setLength(double side) {
+        this.length = side;
+
     }
 
-    public double getArea2(){
-        return side * side;
+    @Override
+    void setWidth(double side) {
+        this.width = side;
+
     }
 
-    public double getPerimeter2(){
+    @Override
+    public double getPerimeter() {
         return side * 4;
     }
 
+    @Override
+    public double getArea() {
+        return side * side;
+    }
 
+    public Square(double side){
+        super(side, side);
+        this.side = side;
+    }
 }

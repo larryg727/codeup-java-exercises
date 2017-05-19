@@ -6,15 +6,15 @@ package Java2;
 public class ShapesTest {
     public static void main(String[] args) {
 
-    Rectangle box1 = new Rectangle(5,4);
+    Measurable myShape = new Square(5);
 
-        System.out.println(box1.getPerimeter());
-        System.out.println(box1.getArea());
+        System.out.println("Square area is : " + myShape.getArea());
+        System.out.println("Square perimeter is :" + myShape.getPerimeter());
 
-        Rectangle box2 = new Square(5);
+        Measurable myShape2 = new Rectangle(8,5);
 
-        System.out.println(box2.getPerimeter());
-        System.out.println(box2.getArea());
+        System.out.println("Rectangle area is : " + myShape2.getArea());
+        System.out.println("Rectangle perimeter is :" + myShape2.getPerimeter());
 
 
     }
