@@ -1,6 +1,5 @@
 package Java2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -26,16 +25,16 @@ public class MoviesApp {
                 System.out.println(all());
                 break;
             case 2:
-                System.out.println(catagoryFinder("animated"));
+                System.out.println(categoryFinder("animated"));
                 break;
             case 3:
-                System.out.println(catagoryFinder("drama"));
+                System.out.println(categoryFinder("drama"));
                 break;
             case 4:
-                System.out.println(catagoryFinder("horror"));
+                System.out.println(categoryFinder("horror"));
                 break;
             case 5:
-                System.out.println(catagoryFinder("scifi"));
+                System.out.println(categoryFinder("scifi"));
                 break;
             case 6:
                 addMovie();
@@ -68,14 +67,14 @@ public class MoviesApp {
         return allMovies;
     }
 
-    public static String catagoryFinder(String catagory){
-        String moviesCatagory = "";
+    public static String categoryFinder(String category){
+        String moviesCategory = "";
         for(Movie movie: MoviesArray.findAll()){
-            if(movie.getCategory().equals(catagory)){
-                moviesCatagory += movie.getName() + " -- " + movie.getCategory() + "\n";
+            if(movie.getCategory().equals(category)){
+                moviesCategory += movie.getName() + " -- " + movie.getCategory() + "\n";
             }
         }
-        return moviesCatagory;
+        return moviesCategory;
     }
 
     public static void addMovie(){
@@ -85,6 +84,7 @@ public class MoviesApp {
         String newCategory = userInput.getString("What category is the movie classified as?");
         Movie[] copy = Arrays.copyOf(MoviesArray.findAll(), length + 1);
         copy[length]= new Movie (newName, newCategory);
+
     }
 
 
