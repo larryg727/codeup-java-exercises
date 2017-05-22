@@ -35,6 +35,14 @@ public class Student {
 
     }
 
+    public String getGrades(){
+        String gradesString = "";
+        for(Integer grade: grades){
+            gradesString += " |" +  grade + "| ";
+        }
+            return gradesString;
+    }
+
 
     public static void main(String[] args) {
         Student student1 = new Student("Bob", new ArrayList<>());
