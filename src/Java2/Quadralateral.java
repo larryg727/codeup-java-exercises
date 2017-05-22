@@ -5,6 +5,7 @@ package Java2;
  */
 abstract class Quadralateral extends Shape implements Measurable{
 
+
     protected double length;
     protected double width;
 

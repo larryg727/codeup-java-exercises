@@ -21,6 +21,7 @@ public class Rectangle extends Quadralateral{
         this.length = length;
     }
 
+
     @Override
     void setWidth(double width) {
         this.width = width;

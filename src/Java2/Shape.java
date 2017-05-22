@@ -5,6 +5,4 @@ package Java2;
  */
 abstract class Shape {
 
-
-
 }

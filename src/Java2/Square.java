@@ -6,6 +6,7 @@ package Java2;
 class Square extends Quadralateral {
     private double side;
 
+
     @Override
     void setLength(double side) {
         this.length = side;
