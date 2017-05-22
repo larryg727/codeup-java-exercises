@@ -32,8 +32,22 @@ public class GradesApplication {
         students.put("AlwaysSharon", student2);
         students.put("dntPstrTheChstr", student3);
 
-        System.out.println(students.get(student1));
 
+        commandLineInterface(students, student1, student2, student3);
+
+
+
+
+    }
+
+    public static void displayStudent(Student student, String username){
+        System.out.print("\nName: " + student.getName() + " - Github Username: " +
+                username + "\nCurrent Average: " +  String.format("%.2f", student.getGradeAverage()) +
+        "\nGrades: " + student.getGrades());
+
+    }
+
+    public static void commandLineInterface(Map students, Student student1, Student student2, Student student3){
         Input userinput = new Input();
         System.out.print("Welcome!\n\nHere are the github usernames of our students:\n\n");
         boolean another = true;
@@ -52,22 +66,12 @@ public class GradesApplication {
             } else {
                 System.out.println("Sorry, no student found with the gihub username of " + studentSelected);
             }
-           another = userinput.yesNo("\nWould you like to see another student? y/n");
+            another = userinput.yesNo("\nWould you like to see another student? y/n");
             userinput.getString();
         }while(another);
 
         System.out.println("Goodbye, and have a wonderful day!");
 
-
-
-
-
-    }
-
-    public static void displayStudent(Student student, String username){
-        System.out.print("\nName: " + student.getName() + " - Github Username: " +
-                username + "\nCurrent Average: " +  String.format("%.2f", student.getGradeAverage()) +
-        "\nGrades: " + student.getGrades());
 
     }
 }
