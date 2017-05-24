@@ -7,6 +7,7 @@ package Java2;
 public class InputTest {
     public static void main(String[] args) {
         Input userInput = new Input();
+
         System.out.println("Enter a word or phrase");
         String test = userInput.getString();
         System.out.println(test);
@@ -19,7 +20,7 @@ public class InputTest {
             System.out.println( "no");
         }
 
-        System.out.println("Number an integer between 1 and 5");
+        System.out.println("Enter an integer between 1 and 5");
         int number = userInput.getInt(1, 5);
         System.out.println(number);
 
